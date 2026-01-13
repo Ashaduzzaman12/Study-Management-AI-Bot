@@ -1,17 +1,114 @@
-# Study-Management-AI-Bot
+# 📘 Study Management AI Bot
 
-This repository contains a standalone AI Engine for generating study content, including flashcards, quizzes, summaries, and answer evaluation. It's built with modularity in mind, allowing easy extension and integration with different AI providers.
+A standalone **AI-powered Study Management Engine** built with **Python** and **Streamlit**.  
+The application generates **flashcards, quizzes, summaries**, and **answer evaluations** from study content using a modular, provider-agnostic AI design.
 
-## Features
+This project focuses **only on the AI intelligence layer** and is independent of any backend framework, database, or authentication system.
 
-1. **Flashcard Generation**: Generates question-answer pairs from input text or topics.
-2. **Quiz Generation**: Creates multiple-choice questions with options and correct answers.
-3. **Notes Summarization**: Produces concise summaries from long texts.
-4. **Answer Evaluation**  Evaluates user answers against correct ones, providing scores and feedback.
+---
 
-## Architecture
+## 🚀 Features
 
-- **Modular Design**: Separate classes for AI providers, features, and prompts.
-- **Provider Independence**: Easily switch between AI models (e.g., OpenAI, others).
-- **Configuration**: Uses environment variables for API keys and settings.
-- **Structured Outputs**: All outputs are in JSON format for consistency.
+- 📇 **Flashcard Generation**  
+  Automatically generates question–answer pairs from study text.
+
+- 📝 **Quiz Generation**  
+  Creates multiple-choice questions with one correct answer.
+
+- ✂️ **Notes Summarization**  
+  Produces concise summaries while preserving key concepts.
+
+- ✅ **Answer Evaluation**  
+  Evaluates user answers against correct answers with a score and feedback.
+
+- 🔌 **Provider-Agnostic Design**  
+  Easily switch AI providers by implementing a new provider class.
+
+---
+
+## 🧠 Architecture Overview
+
+```
+Streamlit UI
+     │
+     ▼
+Feature Generators
+(Flashcards, Quiz, Summary, Evaluation)
+     │
+     ▼
+BaseProvider (Abstract Class)
+     │
+     ▼
+OpenAIProvider (LLM Implementation)
+```
+
+---
+
+## 📁 Project Structure
+
+```
+.
+├── app.py                # Main Streamlit application
+├── requirements.txt      # Python dependencies
+├── .env                  # Environment variables (not committed)
+├── .gitignore            # Git ignore rules
+└── README.md             # Project documentation
+```
+
+---
+
+## 📦 1. Clone the Repository
+
+```bash
+git clone <your-github-repo-url>
+cd <your-repo-folder>
+```
+
+---
+
+## 🐍 2. Create & Activate Virtual Environment
+
+### Windows (PowerShell)
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+### macOS / Linux
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+---
+
+## 📥 3. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## 🔑 4. Environment Variables Setup
+
+Create a `.env` file in the project root.
+
+Example `.env`:
+```env
+OPENAI_API_KEY=your_openai_api_key_here
+```
+
+> ⚠️ **Never commit your `.env` file to GitHub**
+
+---
+
+## ▶️ 5. Run the Application
+
+Start the Streamlit app using:
+
+```bash
+streamlit run app.py
+```
+
+The application will open automatically in your default browser.
