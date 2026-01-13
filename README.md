@@ -115,3 +115,93 @@ streamlit run app.py
 ```
 
 The application will open automatically in your default browser.
+
+---
+## 🌐 6. Deploy on Render (Live Hosting)
+
+### Step 1: Push Code to GitHub
+Ensure your repository contains:
+- `app.py`
+- `requirements.txt`
+
+---
+
+### Step 2: Create Render Web Service
+
+1. Go to **https://render.com**
+2. Click **New → Web Service**
+3. Connect your GitHub repository
+4. Configure:
+
+| Setting | Value |
+|------|------|
+| Environment | Python |
+| Build Command | `pip install -r requirements.txt` |
+| Start Command | `streamlit run app.py --server.port=$PORT --server.address=0.0.0.0` |
+| Instance Type | Free |
+
+---
+
+### Step 3: Add Environment Variables in Render
+
+```
+OPENAI_API_KEY = your_openai_api_key_here
+```
+
+---
+
+### Step 4: Deploy 🚀
+
+Render will provide a live URL such as:
+```
+https://study-management-ai.onrender.com
+```
+
+---
+
+## 🧪 Example Outputs
+
+### Flashcards
+```json
+{
+  "flashcards": [
+    {
+      "question": "What is photosynthesis?",
+      "answer": "It is the process by which plants use sunlight to produce food."
+    }
+  ]
+}
+```
+
+### Quiz
+```json
+{
+  "quiz": [
+    {
+      "question": "What do plants need for photosynthesis?",
+      "options": ["Water", "Sunlight", "Oxygen", "Nitrogen"],
+      "correct_answer": "Sunlight"
+    }
+  ]
+}
+```
+
+### Summary
+```json
+{
+  "summary": "Photosynthesis is the process by which plants create food using sunlight."
+}
+```
+
+---
+
+## 🛡 Hallucination Control Strategy
+
+- Strict JSON output enforcement
+- Structured prompts
+- Low-temperature generation
+- Input-grounded responses
+- Graceful error handling for invalid outputs
+
+---
+
