@@ -51,7 +51,7 @@ OpenAIProvider (LLM Implementation)
 
 ```
 .
-├── app.py                # Main Streamlit application
+├── apps.py                # Main Streamlit application
 ├── requirements.txt      # Python dependencies
 ├── .env                  # Environment variables (not committed)
 └── README.md             # Project documentation
@@ -110,7 +110,7 @@ OPENAI_API_KEY=your_openai_api_key_here
 Start the Streamlit app using:
 
 ```bash
-streamlit run app.py
+streamlit run apps.py
 ```
 
 The application will open automatically in your default browser.
@@ -120,7 +120,7 @@ The application will open automatically in your default browser.
 
 ### Step 1: Push Code to GitHub
 Ensure your repository contains:
-- `app.py`
+- `apps.py`
 - `requirements.txt`
 
 ---
