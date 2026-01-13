@@ -16,7 +16,7 @@ class BaseProvider(ABC):
         :return: The AI-generated response as a string.
         """
         pass
-# OpenAI Provider Class
+# OpenAI Provider 
 class OpenAIProvider(BaseProvider):
     def __init__(self):
         self.client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
@@ -37,7 +37,7 @@ class OpenAIProvider(BaseProvider):
         except Exception as e:
             raise RuntimeError(f"OpenAI API error: {str(e)}")
 
-# Flashcard Generator Class
+# Flashcard Generator 
 class FlashcardGenerator:
     def __init__(self, provider: BaseProvider):
         self.provider = provider
@@ -54,7 +54,7 @@ class FlashcardGenerator:
             return json.loads(response)
         except json.JSONDecodeError:
             return {"error": "Failed to parse response as JSON"}
-# Quiz Generator Class
+# Quiz Generator 
 class QuizGenerator:
    
     def __init__(self, provider: BaseProvider):
@@ -73,7 +73,7 @@ class QuizGenerator:
         except json.JSONDecodeError:
             return {"error": "Failed to parse response as JSON"}
 
-# Summarizer Class
+# Summarizer 
 class Summarizer:
    
     def __init__(self, provider: BaseProvider):
@@ -92,7 +92,7 @@ class Summarizer:
         except json.JSONDecodeError:
             return {"error": "Failed to parse response as JSON"}
 
-# Answer Evaluator Class
+# Answer Evaluator 
 class AnswerEvaluator:
     def __init__(self, provider: BaseProvider):
         self.provider = provider
