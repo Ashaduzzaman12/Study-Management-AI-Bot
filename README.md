@@ -54,7 +54,6 @@ OpenAIProvider (LLM Implementation)
 ├── app.py                # Main Streamlit application
 ├── requirements.txt      # Python dependencies
 ├── .env                  # Environment variables (not committed)
-├── .gitignore            # Git ignore rules
 └── README.md             # Project documentation
 ```
 
@@ -63,8 +62,8 @@ OpenAIProvider (LLM Implementation)
 ## 📦 1. Clone the Repository
 
 ```bash
-git clone <your-github-repo-url>
-cd <your-repo-folder>
+git clone https://github.com/Ashaduzzaman12/Study-Management-AI-Bot
+cd Study-Management-AI-Bot
 ```
 
 ---
