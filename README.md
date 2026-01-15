@@ -3,6 +3,10 @@
 The bot is hosted in render .
 The hosted Link: https://study-management-ai-bot-1.onrender.com/
 
+⚠️ This app uses Render Free Tier which sleeps on inactivity.
+An uptime monitor is used to keep the demo responsive.
+
+
 A standalone **AI-powered Study Management Engine** built with **Python** and **Streamlit**.  
 The application generates **flashcards, quizzes, summaries**, and **answer evaluations** from study content using a modular, provider-agnostic AI design.
 
